@@ -1,4 +1,4 @@
-; Sat Jan 23 17:59:46 EET 2016
+; Sat Jan 23 21:16:20 EET 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -7,14 +7,27 @@
 (defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
 	(is-a USER)
 	(role abstract)
+	(single-slot pc_advisor_Class59
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot has_integrated_video
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
+		(type INSTANCE)
+;+		(allowed-classes Graphics)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot size
 		(type STRING)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot firstName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot are_there_often_thunders
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot clock_speed
 		(type INTEGER)
@@ -26,6 +39,15 @@
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot router_location
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot working_core
+		(type SYMBOL)
+		(allowed-values Optical Flash)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot manufacturer
 		(type STRING)
 ;+		(cardinality 0 1)
@@ -33,6 +55,16 @@
 	(single-slot refresh_rate
 		(type INTEGER)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot inches
+		(type INTEGER)
+		(range 15 24)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot supports
+		(type INSTANCE)
+;+		(allowed-classes Drive)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot cores
 		(type INTEGER)
@@ -44,17 +76,35 @@
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot ram_slots
+	(single-slot power
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot antennas
 		(type INTEGER)
 		(range 1 4)
-;+		(cardinality 0 1)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot ram_slots
+		(type INSTANCE)
+;+		(allowed-classes Memory)
+		(cardinality 1 4)
 		(create-accessor read-write))
 	(single-slot model
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot watts
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot memory_amount
 		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot system
+		(type SYMBOL)
+		(allowed-values 2.0 2.1 5.1 7.1)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot has_hyperthreading
@@ -62,8 +112,18 @@
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot is_gamer
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot amount
 		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot speed_class
+		(type SYMBOL)
+		(allowed-values b g n)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot memory_size
@@ -77,7 +137,25 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot memory_type
-		(type STRING)
+		(type SYMBOL)
+		(allowed-values GDDR3 GDDR5)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot floors
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot battery_time
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot rooms
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot has_flash_memory
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot socket
@@ -87,6 +165,26 @@
 
 (defclass Person
 	(is-a USER)
+	(role abstract)
+	(single-slot firstName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Gamer
+	(is-a Person)
+	(role concrete))
+
+(defclass Casual+User
+	(is-a Person)
+	(role concrete))
+
+(defclass IT+Technician
+	(is-a Person)
+	(role concrete))
+
+(defclass Graphics+Renderer
+	(is-a Person)
 	(role concrete))
 
 (defclass Part
@@ -104,6 +202,11 @@
 (defclass Motherboard
 	(is-a Part)
 	(role concrete)
+	(single-slot supports
+		(type INSTANCE)
+;+		(allowed-classes Drive)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot size
 		(type STRING)
 ;+		(cardinality 0 1)
@@ -112,10 +215,10 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot ram_slots
-		(type INTEGER)
-		(range 1 4)
-;+		(cardinality 0 1)
+	(multislot ram_slots
+		(type INSTANCE)
+;+		(allowed-classes Memory)
+		(cardinality 1 4)
 		(create-accessor read-write)))
 
 (defclass Processor
@@ -137,8 +240,8 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot has_integrated_video
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
+		(type INSTANCE)
+;+		(allowed-classes Graphics)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot has_turbo
@@ -156,7 +259,8 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot memory_type
-		(type STRING)
+		(type SYMBOL)
+		(allowed-values GDDR3 GDDR5)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
@@ -166,15 +270,30 @@
 	(single-slot amount
 		(type INTEGER)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot working_core
+		(type SYMBOL)
+		(allowed-values Optical Flash)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass HDD
 	(is-a Drive)
-	(role concrete))
+	(role concrete)
+	(single-slot working_core
+		(type SYMBOL)
+		(allowed-values Optical)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
 
 (defclass SSD
 	(is-a Drive)
-	(role concrete))
+	(role concrete)
+	(single-slot working_core
+		(type SYMBOL)
+		(allowed-values Flash)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
 
 (defclass Memory
 	(is-a Part)
@@ -204,32 +323,85 @@
 
 (defclass Power+Supply
 	(is-a Part)
-	(role concrete))
+	(role concrete)
+	(single-slot watts
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
 
 (defclass Accessory
-	(is-a USER)
+	(is-a Part)
 	(role abstract))
 
 (defclass Monitor
 	(is-a Accessory)
-	(role concrete))
+	(role concrete)
+	(single-slot inches
+		(type INTEGER)
+		(range 15 24)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
 
 (defclass UPS
 	(is-a Accessory)
-	(role concrete))
+	(role concrete)
+	(single-slot battery_time
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
 
 (defclass Speakers
 	(is-a Accessory)
-	(role concrete))
+	(role concrete)
+	(single-slot power
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot system
+		(type SYMBOL)
+		(allowed-values 2.0 2.1 5.1 7.1)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
 
 (defclass Router
 	(is-a Accessory)
-	(role concrete))
+	(role concrete)
+	(single-slot speed_class
+		(type SYMBOL)
+		(allowed-values b g n)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot antennas
+		(type INTEGER)
+		(range 1 4)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
 
 (defclass Weather
 	(is-a USER)
-	(role concrete))
+	(role concrete)
+	(single-slot are_there_often_thunders
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
 
-(defclass HouseStructure
+(defclass Home
 	(is-a USER)
+	(role abstract)
+	(single-slot rooms
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass House
+	(is-a Home)
+	(role concrete)
+	(single-slot floors
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Apartment
+	(is-a Home)
 	(role concrete))

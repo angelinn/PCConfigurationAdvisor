@@ -1,4 +1,4 @@
-; Sat Jan 23 17:59:46 EET 2016
+; Sat Jan 23 21:16:20 EET 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,9 +20,9 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[pc_advisor_ProjectKB_Class135]
-		[pc_advisor_ProjectKB_Class136]
-		[pc_advisor_ProjectKB_Class137]))
+		[pc_advisor_ProjectKB_Class196]
+		[pc_advisor_ProjectKB_Class197]
+		[pc_advisor_ProjectKB_Class198]))
 
 ([CLSES_TAB] of  Widget
 
@@ -581,17 +581,17 @@
 
 	(name "SearchTab_Query"))
 
-([pc_advisor_ProjectKB_Class135] of  String
+([pc_advisor_ProjectKB_Class196] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([pc_advisor_ProjectKB_Class136] of  String
+([pc_advisor_ProjectKB_Class197] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([pc_advisor_ProjectKB_Class137] of  String
+([pc_advisor_ProjectKB_Class198] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
