@@ -1,0 +1,235 @@
+; Sat Jan 23 17:59:46 EET 2016
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot has_integrated_video
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot size
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot clock_speed
+		(type INTEGER)
+		(range 1000 7000)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot has_water
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot manufacturer
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot refresh_rate
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot cores
+		(type INTEGER)
+		(range 1 12)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot has_turbo
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot ram_slots
+		(type INTEGER)
+		(range 1 4)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot model
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot memory_amount
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot has_hyperthreading
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot amount
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot memory_size
+		(type INTEGER)
+		(range 128 4096)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot type
+		(type SYMBOL)
+		(allowed-values DDR DDR2 DDR3 DDR4)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot memory_type
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot socket
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Person
+	(is-a USER)
+	(role concrete))
+
+(defclass Part
+	(is-a USER)
+	(role abstract)
+	(single-slot manufacturer
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot model
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Motherboard
+	(is-a Part)
+	(role concrete)
+	(single-slot size
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot socket
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot ram_slots
+		(type INTEGER)
+		(range 1 4)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Processor
+	(is-a Part)
+	(role concrete)
+	(single-slot cores
+		(type INTEGER)
+		(range 1 12)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot has_hyperthreading
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot clock_speed
+		(type INTEGER)
+		(range 1000 7000)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot has_integrated_video
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot has_turbo
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Graphics
+	(is-a Part)
+	(role concrete)
+	(single-slot memory_size
+		(type INTEGER)
+		(range 128 4096)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot memory_type
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Drive
+	(is-a Part)
+	(role abstract)
+	(single-slot amount
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass HDD
+	(is-a Drive)
+	(role concrete))
+
+(defclass SSD
+	(is-a Drive)
+	(role concrete))
+
+(defclass Memory
+	(is-a Part)
+	(role concrete)
+	(single-slot memory_amount
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot type
+		(type SYMBOL)
+		(allowed-values DDR DDR2 DDR3 DDR4)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot refresh_rate
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Cooling
+	(is-a Part)
+	(role concrete)
+	(single-slot has_water
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Power+Supply
+	(is-a Part)
+	(role concrete))
+
+(defclass Accessory
+	(is-a USER)
+	(role abstract))
+
+(defclass Monitor
+	(is-a Accessory)
+	(role concrete))
+
+(defclass UPS
+	(is-a Accessory)
+	(role concrete))
+
+(defclass Speakers
+	(is-a Accessory)
+	(role concrete))
+
+(defclass Router
+	(is-a Accessory)
+	(role concrete))
+
+(defclass Weather
+	(is-a USER)
+	(role concrete))
+
+(defclass HouseStructure
+	(is-a USER)
+	(role concrete))
