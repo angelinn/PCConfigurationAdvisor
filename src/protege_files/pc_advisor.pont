@@ -1,4 +1,4 @@
-; Sat Jan 23 21:16:20 EET 2016
+; Sun Jan 24 17:00:39 EET 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -14,15 +14,12 @@
 	(single-slot has_integrated_video
 		(type INSTANCE)
 ;+		(allowed-classes Graphics)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot size
-		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot firstName
-		(type STRING)
-;+		(cardinality 1 1)
+	(single-slot size
+		(type SYMBOL)
+		(allowed-values ATX M-ATX)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot are_there_often_thunders
 		(type SYMBOL)
@@ -64,7 +61,7 @@
 	(single-slot supports
 		(type INSTANCE)
 ;+		(allowed-classes Drive)
-;+		(cardinality 0 1)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot cores
 		(type INTEGER)
@@ -72,6 +69,11 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot has_turbo
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot is_hardcore_gamer
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
@@ -84,6 +86,15 @@
 		(type INTEGER)
 		(range 1 4)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot mem_type
+		(type SYMBOL)
+		(allowed-values DDR DDR2 DDR3 DDR4 GDDR3 GDDR5 Shared)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot pc_advisor_Class17
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(multislot ram_slots
 		(type INSTANCE)
@@ -118,7 +129,11 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot amount
-		(type INTEGER)
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot first_name
+		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot speed_class
@@ -126,10 +141,19 @@
 		(allowed-values b g n)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot likes_games
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot memory_size
 		(type INTEGER)
 		(range 128 4096)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot available_cash
+		(type INTEGER)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot type
 		(type SYMBOL)
@@ -137,8 +161,8 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot memory_type
-		(type SYMBOL)
-		(allowed-values GDDR3 GDDR5)
+		(type INSTANCE)
+;+		(allowed-classes Graphic)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot floors
@@ -165,27 +189,25 @@
 
 (defclass Person
 	(is-a USER)
-	(role abstract)
-	(single-slot firstName
+	(role concrete)
+	(single-slot is_hardcore_gamer
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot likes_games
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot available_cash
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot first_name
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
-
-(defclass Gamer
-	(is-a Person)
-	(role concrete))
-
-(defclass Casual+User
-	(is-a Person)
-	(role concrete))
-
-(defclass IT+Technician
-	(is-a Person)
-	(role concrete))
-
-(defclass Graphics+Renderer
-	(is-a Person)
-	(role concrete))
 
 (defclass Part
 	(is-a USER)
@@ -202,13 +224,9 @@
 (defclass Motherboard
 	(is-a Part)
 	(role concrete)
-	(single-slot supports
-		(type INSTANCE)
-;+		(allowed-classes Drive)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot size
-		(type STRING)
+		(type SYMBOL)
+		(allowed-values ATX M-ATX)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot socket
@@ -242,7 +260,7 @@
 	(single-slot has_integrated_video
 		(type INSTANCE)
 ;+		(allowed-classes Graphics)
-;+		(cardinality 1 1)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot has_turbo
 		(type SYMBOL)
@@ -259,8 +277,8 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot memory_type
-		(type SYMBOL)
-		(allowed-values GDDR3 GDDR5)
+		(type INSTANCE)
+;+		(allowed-classes Graphic)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
@@ -268,7 +286,7 @@
 	(is-a Part)
 	(role abstract)
 	(single-slot amount
-		(type INTEGER)
+		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot working_core
@@ -295,23 +313,6 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
-(defclass Memory
-	(is-a Part)
-	(role concrete)
-	(single-slot memory_amount
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot type
-		(type SYMBOL)
-		(allowed-values DDR DDR2 DDR3 DDR4)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot refresh_rate
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write)))
-
 (defclass Cooling
 	(is-a Part)
 	(role concrete)
@@ -321,45 +322,15 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
-(defclass Power+Supply
-	(is-a Part)
-	(role concrete)
-	(single-slot watts
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write)))
-
 (defclass Accessory
 	(is-a Part)
 	(role abstract))
-
-(defclass Monitor
-	(is-a Accessory)
-	(role concrete)
-	(single-slot inches
-		(type INTEGER)
-		(range 15 24)
-;+		(cardinality 1 1)
-		(create-accessor read-write)))
 
 (defclass UPS
 	(is-a Accessory)
 	(role concrete)
 	(single-slot battery_time
 		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write)))
-
-(defclass Speakers
-	(is-a Accessory)
-	(role concrete)
-	(single-slot power
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot system
-		(type SYMBOL)
-		(allowed-values 2.0 2.1 5.1 7.1)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
@@ -405,3 +376,30 @@
 (defclass Apartment
 	(is-a Home)
 	(role concrete))
+
+(defclass Memory
+	(is-a USER)
+	(role abstract)
+	(single-slot mem_type
+		(type SYMBOL)
+		(allowed-values DDR DDR2 DDR3 DDR4 GDDR3 GDDR5 Shared)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Onboard
+	(is-a Memory)
+	(role concrete)
+	(single-slot mem_type
+		(type SYMBOL)
+		(allowed-values DDR DDR2 DDR3 DDR4)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Graphic
+	(is-a Memory)
+	(role concrete)
+	(single-slot mem_type
+		(type SYMBOL)
+		(allowed-values GDDR3 GDDR5 Shared)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
