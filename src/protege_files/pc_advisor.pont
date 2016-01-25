@@ -1,4 +1,4 @@
-; Sun Jan 24 17:00:39 EET 2016
+; Mon Jan 25 18:08:31 EET 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -36,13 +36,13 @@
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot router_location
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot working_core
 		(type SYMBOL)
 		(allowed-values Optical Flash)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot router_location
+		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot manufacturer
@@ -58,14 +58,14 @@
 		(range 15 24)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot supports
-		(type INSTANCE)
-;+		(allowed-classes Drive)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot cores
 		(type INTEGER)
 		(range 1 12)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot supports
+		(type INSTANCE)
+;+		(allowed-classes Drive)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot has_turbo
@@ -105,11 +105,11 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot watts
+	(single-slot memory_amount
 		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot memory_amount
+	(single-slot watts
 		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
@@ -136,14 +136,14 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot speed_class
-		(type SYMBOL)
-		(allowed-values b g n)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot likes_games
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot speed_class
+		(type SYMBOL)
+		(allowed-values b g n)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot memory_size
@@ -155,21 +155,21 @@
 		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot type
-		(type SYMBOL)
-		(allowed-values DDR DDR2 DDR3 DDR4)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot memory_type
 		(type INSTANCE)
 ;+		(allowed-classes Graphic)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot floors
-		(type INTEGER)
+	(single-slot type
+		(type SYMBOL)
+		(allowed-values DDR DDR2 DDR3 DDR4)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot battery_time
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot floors
 		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
@@ -247,14 +247,14 @@
 		(range 1 12)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot has_hyperthreading
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot clock_speed
 		(type INTEGER)
 		(range 1000 7000)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot has_hyperthreading
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot has_integrated_video
@@ -345,15 +345,6 @@
 	(single-slot antennas
 		(type INTEGER)
 		(range 1 4)
-;+		(cardinality 1 1)
-		(create-accessor read-write)))
-
-(defclass Weather
-	(is-a USER)
-	(role concrete)
-	(single-slot are_there_often_thunders
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 

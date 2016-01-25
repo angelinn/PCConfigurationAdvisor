@@ -1,4 +1,4 @@
-; Sun Jan 24 17:00:39 EET 2016
+; Mon Jan 25 18:08:32 EET 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,23 +20,22 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[pc_advisor_ProjectKB_Class10330]
-		[pc_advisor_ProjectKB_Class10331]
-		[pc_advisor_ProjectKB_Class10332]
-		[pc_advisor_ProjectKB_Class10333]
-		[pc_advisor_ProjectKB_Class10334]
-		[pc_advisor_ProjectKB_Class10335]
-		[pc_advisor_ProjectKB_Class10336]
-		[pc_advisor_ProjectKB_Class10337]
-		[pc_advisor_ProjectKB_Class10338]
-		[pc_advisor_ProjectKB_Class10339]
-		[pc_advisor_ProjectKB_Class10340]
-		[pc_advisor_ProjectKB_Class10341]
-		[pc_advisor_ProjectKB_Class10342]
-		[pc_advisor_ProjectKB_Class10343]
-		[pc_advisor_ProjectKB_Class10344]
-		[pc_advisor_ProjectKB_Class10345]
-		[pc_advisor_ProjectKB_Class10346]))
+		[pc_advisor_ProjectKB_Class10151]
+		[pc_advisor_ProjectKB_Class10152]
+		[pc_advisor_ProjectKB_Class10153]
+		[pc_advisor_ProjectKB_Class10154]
+		[pc_advisor_ProjectKB_Class10155]
+		[pc_advisor_ProjectKB_Class10156]
+		[pc_advisor_ProjectKB_Class10157]
+		[pc_advisor_ProjectKB_Class10158]
+		[pc_advisor_ProjectKB_Class10159]
+		[pc_advisor_ProjectKB_Class10160]
+		[pc_advisor_ProjectKB_Class10161]
+		[pc_advisor_ProjectKB_Class10162]
+		[pc_advisor_ProjectKB_Class10163]
+		[pc_advisor_ProjectKB_Class10164]
+		[pc_advisor_ProjectKB_Class10165]
+		[pc_advisor_ProjectKB_Class10166]))
 
 ([CLSES_TAB] of  Widget
 
@@ -76,6 +75,9 @@
 ([INSTANCES_TAB] of  Widget
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
+
+([KB_273061_Class0] of  Map
+)
 
 ([KB_638814_Class0] of  String
 
@@ -177,9 +179,6 @@
 	(name "classes_file_name")
 	(string_value "pc_advisor.pont"))
 
-([KB_771760_Class0] of  Map
-)
-
 ([LAYOUT_PROPERTIES] of  Property_List
 
 	(name "layout properties")
@@ -267,94 +266,113 @@
 ([pc_advisor_ProjectKB_Class10] of  Property_List
 )
 
+([pc_advisor_ProjectKB_Class100] of  Property_List
+
+	(properties
+		[pc_advisor_ProjectKB_Class10101]
+		[pc_advisor_ProjectKB_Class10102]))
+
 ([pc_advisor_ProjectKB_Class101] of  String
 
 	(name "SearchTab_Query"))
 
-([pc_advisor_ProjectKB_Class10330] of  String
+([pc_advisor_ProjectKB_Class10101] of  Property_List
+
+	(name "layout properties"))
+
+([pc_advisor_ProjectKB_Class10102] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "are_there_often_thunders")
+	(property_list [pc_advisor_ProjectKB_Class10103])
+	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([pc_advisor_ProjectKB_Class10103] of  Property_List
+)
+
+([pc_advisor_ProjectKB_Class10151] of  String
 
 	(name "HDD")
 	(string_value "manufacturer{+}model{+}amount"))
 
-([pc_advisor_ProjectKB_Class10331] of  String
+([pc_advisor_ProjectKB_Class10152] of  String
 
 	(name "Graphics")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10332] of  String
+([pc_advisor_ProjectKB_Class10153] of  String
 
 	(name "Onboard")
 	(string_value "mem_type"))
 
-([pc_advisor_ProjectKB_Class10333] of  String
+([pc_advisor_ProjectKB_Class10154] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([pc_advisor_ProjectKB_Class10334] of  String
+([pc_advisor_ProjectKB_Class10155] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([pc_advisor_ProjectKB_Class10335] of  String
-
-	(name "Weather")
-	(string_value "are_there_often_thunders"))
-
-([pc_advisor_ProjectKB_Class10336] of  String
+([pc_advisor_ProjectKB_Class10156] of  String
 
 	(name "Router")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10337] of  String
+([pc_advisor_ProjectKB_Class10157] of  String
 
 	(name "Apartment")
 	(string_value "rooms"))
 
-([pc_advisor_ProjectKB_Class10338] of  String
+([pc_advisor_ProjectKB_Class10158] of  String
 
 	(name "UPS")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10339] of  String
+([pc_advisor_ProjectKB_Class10159] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([pc_advisor_ProjectKB_Class10340] of  String
+([pc_advisor_ProjectKB_Class10160] of  String
 
 	(name "House")
 	(string_value "floors{+and+}rooms"))
 
-([pc_advisor_ProjectKB_Class10341] of  String
+([pc_advisor_ProjectKB_Class10161] of  String
 
 	(name "Cooling")
 	(string_value "model"))
 
-([pc_advisor_ProjectKB_Class10342] of  String
+([pc_advisor_ProjectKB_Class10162] of  String
 
 	(name "Person")
 	(string_value "first_name"))
 
-([pc_advisor_ProjectKB_Class10343] of  String
+([pc_advisor_ProjectKB_Class10163] of  String
 
 	(name "Graphic")
 	(string_value "mem_type"))
 
-([pc_advisor_ProjectKB_Class10344] of  String
+([pc_advisor_ProjectKB_Class10164] of  String
 
 	(name "Processor")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10345] of  String
-
-	(name "Motherboard")
-	(string_value "manufacturer{+}model"))
-
-([pc_advisor_ProjectKB_Class10346] of  String
+([pc_advisor_ProjectKB_Class10165] of  String
 
 	(name "SSD")
 	(string_value "manufacturer{+}model{+}amount"))
+
+([pc_advisor_ProjectKB_Class10166] of  String
+
+	(name "Motherboard")
+	(string_value "manufacturer{+}model"))
 
 ([pc_advisor_ProjectKB_Class11] of  Widget
 
@@ -680,15 +698,22 @@
 	(property_list [pc_advisor_ProjectKB_Class10])
 	(widget_class_name "uk.ac.man.cs.mig.coode.debugger.test.DebuggerTestTab"))
 
+([pc_advisor_ProjectKB_Class99] of  Widget
+
+	(is_hidden FALSE)
+	(name "Weather")
+	(property_list [pc_advisor_ProjectKB_Class100])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
 ([PROJECT] of  Project
 
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
+		[INSTANCE_ANNOTATION_FORM_WIDGET]
+		[STANDARD_SLOT_FORM_WIDGET]
 		[STANDARD_FACET_FORM_WIDGET]
 		[PAL_FORM_WIDGET]
-		[STANDARD_CLASS_FORM_WIDGET]
-		[INSTANCE_ANNOTATION_FORM_WIDGET]
-		[STANDARD_SLOT_FORM_WIDGET])
+		[STANDARD_CLASS_FORM_WIDGET])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
 	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")

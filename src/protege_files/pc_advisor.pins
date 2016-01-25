@@ -1,4 +1,4 @@
-; Sun Jan 24 17:00:39 EET 2016
+; Mon Jan 25 18:08:31 EET 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -92,27 +92,19 @@
 	(model "Black")
 	(working_core Optical))
 
-([pc_advisor_Class10014] of  Person
+([pc_advisor_Class10018] of  Graphics
 
-	(available_cash 2000)
-	(first_name "Gele")
-	(is_hardcore_gamer TRUE)
-	(likes_games TRUE))
+	(manufacturer "AMD")
+	(memory_size 512)
+	(memory_type [pc_advisor_Class10000])
+	(model "Radeon HD 4550"))
 
-([pc_advisor_Class10015] of  Person
+([pc_advisor_Class10019] of  Graphics
 
-	(available_cash 1000)
-	(first_name "Sedev")
-	(is_hardcore_gamer FALSE)
-	(likes_games TRUE))
-
-([pc_advisor_Class10016] of  Weather
-
-	(are_there_often_thunders TRUE))
-
-([pc_advisor_Class10017] of  Weather
-
-	(are_there_often_thunders FALSE))
+	(manufacturer "Geforce")
+	(memory_size 1024)
+	(memory_type [pc_advisor_Class10000])
+	(model "GT 840"))
 
 ([pc_advisor_Class11] of  UPS
 
@@ -149,6 +141,32 @@
 
 	(floors 1)
 	(rooms 3))
+
+([pc_advisor_Class20000] of  Processor
+
+	(clock_speed 1900)
+	(cores 2)
+	(has_hyperthreading TRUE)
+	(has_integrated_video [pc_advisor_Class10008])
+	(manufacturer "Intel")
+	(model "i3 3500m"))
+
+([pc_advisor_Class20001] of  Processor
+
+	(clock_speed 1800)
+	(cores 1)
+	(manufacturer "AMD")
+	(model "FX 3550"))
+
+([pc_advisor_Class20002] of  Processor
+
+	(clock_speed 3100)
+	(cores 4)
+	(has_hyperthreading TRUE)
+	(has_integrated_video [pc_advisor_Class63])
+	(has_turbo TRUE)
+	(manufacturer "Intel")
+	(model "i7 5500m"))
 
 ([pc_advisor_Class3] of  House
 
