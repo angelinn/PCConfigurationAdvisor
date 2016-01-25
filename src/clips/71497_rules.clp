@@ -15,7 +15,7 @@
 =>
         (printout t "Nice to meet you, " ?name "!" crlf)
         (printout t "Today I'll guide you in picking the right parts for your new computer." crlf)
-        (printout t "What do you do for a living? IT/Unemployed/Other" crlf)
+        (printout t "What do you do for a living? IT/Other" crlf)
         (assert (profession (read)))
 )
 
@@ -74,7 +74,7 @@
         ?gpu <- (object (is-a Graphics) (memory_size ?size)
                                         (memory_type ?type))
 
-        (test (or (< ?size 2048) (eq ?type GDDR3)))
+        (test (or (< ?size 2048) (not (eq (send ?type get-mem_type) GDDR5))))
 =>
         (unmake-instance ?gpu)
 )
