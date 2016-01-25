@@ -4,6 +4,12 @@
         ?answer
 )
 
+(deffunction print_result (?target)
+        (do-for-all-instances ((?part ?target))
+                (printout t (send ?part get-model) " / ")
+        )
+)
+
 (defrule get_name
         =>
         (printout t "Hey! What's your name?" crlf)
@@ -28,6 +34,7 @@
 (defrule likes_games
         =>
         (printout t "Do you like playing games? yes/no" crlf)
+        (assert (is_gamer "no"))
         (assert (likes_games (read)))
 )
 
@@ -79,6 +86,34 @@
         (unmake-instance ?gpu)
 )
 
+(defrule remove_gaming_cpus (declare (salience -1))
+        (is_gamer no)
+        ?cpu <- (object (is-a Processor) (has_turbo ?turbo))
+
+        (test (eq ?turbo TRUE))
+=>
+        (unmake-instance ?cpu)
+)
+
+(defrule remove_gaming_gpus (declare (salience -1))
+        (is_gamer no)
+        ?gpu <- (object (is-a Graphics) (memory_size ?size)
+                                        (memory_type ?type))
+
+        (test (or (> ?size 1024) (eq (send ?type get-mem_type) GDDR5)))
+=>
+        (unmake-instance ?gpu)
+)
+
+(defrule remove_cooling (declare (salience -1))
+        (is_gamer ?g)
+        ?cooling <- (object (is-a Cooling)) (has_water ?water)
+
+        (test (eq ?water (eq ?g no)))
+=>
+        (unmake-instance ?cooling)
+)
+
 (defrule remove_ups (declare (salience -1))
         (thunders no)
         ?ups <- (object (is-a UPS))
@@ -89,16 +124,26 @@
 (defrule remove_small_routers (declare (salience -1))
         (home ?rooms)
         ?r <- (object (is-a Router) (antennas ?a))
-        (test (< ?a 2))
+        (test (and (< ?a 2) (> ?rooms 3)))
 =>
         (unmake-instance ?r)
 )
 
-(defrule end (declare (salience -5))
-        (object (is-a Processor) (manufacturer ?man) (model ?m))
-        (object (is-a Graphics) (manufacturer ?g_man) (model ?g_m))
-=>
-        (printout t crlf ?man " " ?m crlf)
-        (printout t ?g_man " " ?g_m crlf)
+(defrule print_cpus (declare (salience -5))
+        =>
+        (printout t crlf "Recommended items" crlf "Processors: / ")
+        (print_result Processor)
+        (printout t crlf "Motherboards: / ")
+        (print_result Motherboard)
+        (printout t crlf "CPU coolings: / ")
+        (print_result Cooling)
+        (printout t crlf "Graphic cards: / ")
+        (print_result Graphics)
+        (printout t crlf "Drives: / ")
+        (print_result Drive)
+        (printout t crlf "Routers: / ")
+        (print_result Router)
+        (printout t crlf "UPS: / ")
+        (print_result UPS)
+        (printout t crlf)
 )
-

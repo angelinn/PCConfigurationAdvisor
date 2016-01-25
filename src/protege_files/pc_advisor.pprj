@@ -1,4 +1,4 @@
-; Mon Jan 25 18:08:32 EET 2016
+; Mon Jan 25 22:55:13 EET 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,22 +20,22 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[pc_advisor_ProjectKB_Class10151]
-		[pc_advisor_ProjectKB_Class10152]
-		[pc_advisor_ProjectKB_Class10153]
-		[pc_advisor_ProjectKB_Class10154]
-		[pc_advisor_ProjectKB_Class10155]
-		[pc_advisor_ProjectKB_Class10156]
-		[pc_advisor_ProjectKB_Class10157]
-		[pc_advisor_ProjectKB_Class10158]
-		[pc_advisor_ProjectKB_Class10159]
-		[pc_advisor_ProjectKB_Class10160]
-		[pc_advisor_ProjectKB_Class10161]
-		[pc_advisor_ProjectKB_Class10162]
-		[pc_advisor_ProjectKB_Class10163]
-		[pc_advisor_ProjectKB_Class10164]
-		[pc_advisor_ProjectKB_Class10165]
-		[pc_advisor_ProjectKB_Class10166]))
+		[pc_advisor_ProjectKB_Class10195]
+		[pc_advisor_ProjectKB_Class10196]
+		[pc_advisor_ProjectKB_Class10197]
+		[pc_advisor_ProjectKB_Class10198]
+		[pc_advisor_ProjectKB_Class10199]
+		[pc_advisor_ProjectKB_Class10200]
+		[pc_advisor_ProjectKB_Class10201]
+		[pc_advisor_ProjectKB_Class10202]
+		[pc_advisor_ProjectKB_Class10203]
+		[pc_advisor_ProjectKB_Class10204]
+		[pc_advisor_ProjectKB_Class10205]
+		[pc_advisor_ProjectKB_Class10206]
+		[pc_advisor_ProjectKB_Class10207]
+		[pc_advisor_ProjectKB_Class10208]
+		[pc_advisor_ProjectKB_Class10209]
+		[pc_advisor_ProjectKB_Class10210]))
 
 ([CLSES_TAB] of  Widget
 
@@ -294,82 +294,82 @@
 ([pc_advisor_ProjectKB_Class10103] of  Property_List
 )
 
-([pc_advisor_ProjectKB_Class10151] of  String
+([pc_advisor_ProjectKB_Class10195] of  String
 
 	(name "HDD")
 	(string_value "manufacturer{+}model{+}amount"))
 
-([pc_advisor_ProjectKB_Class10152] of  String
+([pc_advisor_ProjectKB_Class10196] of  String
 
 	(name "Graphics")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10153] of  String
+([pc_advisor_ProjectKB_Class10197] of  String
 
 	(name "Onboard")
 	(string_value "mem_type"))
 
-([pc_advisor_ProjectKB_Class10154] of  String
+([pc_advisor_ProjectKB_Class10198] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([pc_advisor_ProjectKB_Class10155] of  String
+([pc_advisor_ProjectKB_Class10199] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([pc_advisor_ProjectKB_Class10156] of  String
+([pc_advisor_ProjectKB_Class10200] of  String
 
 	(name "Router")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10157] of  String
+([pc_advisor_ProjectKB_Class10201] of  String
 
 	(name "Apartment")
 	(string_value "rooms"))
 
-([pc_advisor_ProjectKB_Class10158] of  String
+([pc_advisor_ProjectKB_Class10202] of  String
 
 	(name "UPS")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10159] of  String
+([pc_advisor_ProjectKB_Class10203] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([pc_advisor_ProjectKB_Class10160] of  String
+([pc_advisor_ProjectKB_Class10204] of  String
 
 	(name "House")
 	(string_value "floors{+and+}rooms"))
 
-([pc_advisor_ProjectKB_Class10161] of  String
+([pc_advisor_ProjectKB_Class10205] of  String
 
 	(name "Cooling")
 	(string_value "model"))
 
-([pc_advisor_ProjectKB_Class10162] of  String
+([pc_advisor_ProjectKB_Class10206] of  String
 
 	(name "Person")
 	(string_value "first_name"))
 
-([pc_advisor_ProjectKB_Class10163] of  String
+([pc_advisor_ProjectKB_Class10207] of  String
 
 	(name "Graphic")
 	(string_value "mem_type"))
 
-([pc_advisor_ProjectKB_Class10164] of  String
+([pc_advisor_ProjectKB_Class10208] of  String
 
 	(name "Processor")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10165] of  String
+([pc_advisor_ProjectKB_Class10209] of  String
 
 	(name "SSD")
 	(string_value "manufacturer{+}model{+}amount"))
 
-([pc_advisor_ProjectKB_Class10166] of  String
+([pc_advisor_ProjectKB_Class10210] of  String
 
 	(name "Motherboard")
 	(string_value "manufacturer{+}model"))

@@ -1,4 +1,4 @@
-; Mon Jan 25 18:08:31 EET 2016
+; Mon Jan 25 22:55:13 EET 2016
 ;
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -177,6 +177,10 @@
 		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot cpu_socket
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot has_flash_memory
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
@@ -242,6 +246,10 @@
 (defclass Processor
 	(is-a Part)
 	(role concrete) (pattern-match reactive)
+	(single-slot cpu_socket
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot cores
 		(type INTEGER)
 		(range 1 12)

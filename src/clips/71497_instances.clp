@@ -1,9 +1,9 @@
-; Mon Jan 25 18:08:31 EET 2016
+; Mon Jan 25 22:55:13 EET 2016
 ;
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
-(definstances cool_instances
+(definstances computer_parts
 ([pc_advisor_Class0] of  Apartment
 
 	(rooms 3))
@@ -133,6 +133,7 @@
 
 	(clock_speed 2100)
 	(cores 2)
+	(cpu_socket "AM2+")
 	(has_hyperthreading FALSE)
 	(has_turbo FALSE)
 	(manufacturer "AMD")
@@ -147,8 +148,10 @@
 
 	(clock_speed 1900)
 	(cores 2)
+	(cpu_socket "i5110")
 	(has_hyperthreading TRUE)
 	(has_integrated_video [pc_advisor_Class10008])
+	(has_turbo FALSE)
 	(manufacturer "Intel")
 	(model "i3 3500m"))
 
@@ -156,6 +159,7 @@
 
 	(clock_speed 1800)
 	(cores 1)
+	(cpu_socket "AM2+")
 	(manufacturer "AMD")
 	(model "FX 3550"))
 
@@ -163,6 +167,7 @@
 
 	(clock_speed 3100)
 	(cores 4)
+	(cpu_socket "i5110")
 	(has_hyperthreading TRUE)
 	(has_integrated_video [pc_advisor_Class63])
 	(has_turbo TRUE)
@@ -185,6 +190,7 @@
 
 	(clock_speed 2800)
 	(cores 2)
+	(cpu_socket "i5110")
 	(has_hyperthreading TRUE)
 	(has_integrated_video [pc_advisor_Class63])
 	(has_turbo TRUE)
