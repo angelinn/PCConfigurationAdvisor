@@ -1,4 +1,4 @@
-; Mon Jan 25 22:55:13 EET 2016
+; Tue Jan 26 00:29:19 EET 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -355,26 +355,6 @@
 		(range 1 4)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
-
-(defclass Home
-	(is-a USER)
-	(role abstract)
-	(single-slot rooms
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write)))
-
-(defclass House
-	(is-a Home)
-	(role concrete)
-	(single-slot floors
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write)))
-
-(defclass Apartment
-	(is-a Home)
-	(role concrete))
 
 (defclass Memory
 	(is-a USER)

@@ -1,13 +1,11 @@
-(deffunction ask_question (?question)
-        (printout t ?question crlf)
-        (bind ?answer (read))
-        ?answer
-)
-
 (deffunction print_result (?target)
         (do-for-all-instances ((?part ?target))
                 (printout t (send ?part get-model) " / ")
         )
+)
+
+(deffunction should_remove (?socket)
+        (not (any-instancep ((?cpu Processor)) (eq ?cpu:cpu_socket ?socket)))
 )
 
 (defrule get_name
@@ -18,8 +16,8 @@
 
 (defrule get_profession
         (user_name ?name)
-=>
-        (printout t "Nice to meet you, " ?name "!" crlf)
+        =>
+        (printout t crlf "Nice to meet you, " ?name "!" crlf)
         (printout t "Today I'll guide you in picking the right parts for your new computer." crlf)
         (printout t "What do you do for a living? IT/Other" crlf)
         (assert (profession (read)))
@@ -34,7 +32,7 @@
 (defrule likes_games
         =>
         (printout t "Do you like playing games? yes/no" crlf)
-        (assert (is_gamer "no"))
+        (assert (is_gamer unknown))
         (assert (likes_games (read)))
 )
 
@@ -46,14 +44,17 @@
 
 (defrule living_place
         =>
-        (printout t "Do you live in a big house or an apartment with many rooms?" crlf)
+        (printout t "How many rooms do you have at your home?" crlf)
         (assert (home (read)))
 )
 
 (defrule is_gamer
+        ?i <- (is_gamer unknown)
         (likes_games yes)
 =>
-        (assert (is_gamer (ask_question "Do you consider yourself a gamer? yes/no")))
+        (printout t "Do you consider yourself a gamer? yes/no" crlf)
+        (retract ?i)
+        (assert (is_gamer (read)))
 )
 
 (defrule remove_weak_cpus (declare (salience -1))
@@ -87,7 +88,7 @@
 )
 
 (defrule remove_gaming_cpus (declare (salience -1))
-        (is_gamer no)
+        (is_gamer no|unknown)
         ?cpu <- (object (is-a Processor) (has_turbo ?turbo))
 
         (test (eq ?turbo TRUE))
@@ -96,7 +97,7 @@
 )
 
 (defrule remove_gaming_gpus (declare (salience -1))
-        (is_gamer no)
+        (is_gamer no|unknown)
         ?gpu <- (object (is-a Graphics) (memory_size ?size)
                                         (memory_type ?type))
 
@@ -105,11 +106,11 @@
         (unmake-instance ?gpu)
 )
 
-(defrule remove_cooling (declare (salience -1))
+(defrule remove_non_gaming_cooling (declare (salience -1))
         (is_gamer ?g)
-        ?cooling <- (object (is-a Cooling)) (has_water ?water)
+        ?cooling <- (object (is-a Cooling) (has_water ?water))
 
-        (test (eq ?water (eq ?g no)))
+        (test (not (eq ?water (eq ?g yes))))
 =>
         (unmake-instance ?cooling)
 )
@@ -121,6 +122,15 @@
         (unmake-instance ?ups)
 )
 
+(defrule remove_drives (declare (salience -1))
+        (drive ?d)
+        ?drive <- (object (is-a Drive))
+
+        (test (not (eq ?d (class ?drive))))
+=>
+        (unmake-instance ?drive)
+)
+
 (defrule remove_small_routers (declare (salience -1))
         (home ?rooms)
         ?r <- (object (is-a Router) (antennas ?a))
@@ -129,12 +139,10 @@
         (unmake-instance ?r)
 )
 
-(defrule print_cpus (declare (salience -5))
+(defrule print_advise (declare (salience -5))
         =>
         (printout t crlf "Recommended items" crlf "Processors: / ")
         (print_result Processor)
-        (printout t crlf "Motherboards: / ")
-        (print_result Motherboard)
         (printout t crlf "CPU coolings: / ")
         (print_result Cooling)
         (printout t crlf "Graphic cards: / ")
@@ -145,5 +153,24 @@
         (print_result Router)
         (printout t crlf "UPS: / ")
         (print_result UPS)
+
+        (assert (phase motherboards))
+)
+
+(defrule remove_motherboards
+        (phase motherboards)
+        ?mobo <- (object (is-a Motherboard) (socket ?socket))
+
+        (test (should_remove ?socket))
+=>
+        (unmake-instance ?mobo)
+)
+
+(defrule print_compatible_motherboards (declare (salience -5))
+        ?i <- (phase motherboards)
+=>
+        (retract ?i)
+        (printout t crlf "Compatble motherboards: / ")
+        (print_result Motherboard)
         (printout t crlf)
 )

@@ -1,4 +1,4 @@
-; Mon Jan 25 22:55:13 EET 2016
+; Tue Jan 26 00:29:19 EET 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,22 +20,20 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[pc_advisor_ProjectKB_Class10195]
-		[pc_advisor_ProjectKB_Class10196]
-		[pc_advisor_ProjectKB_Class10197]
-		[pc_advisor_ProjectKB_Class10198]
-		[pc_advisor_ProjectKB_Class10199]
-		[pc_advisor_ProjectKB_Class10200]
-		[pc_advisor_ProjectKB_Class10201]
-		[pc_advisor_ProjectKB_Class10202]
-		[pc_advisor_ProjectKB_Class10203]
-		[pc_advisor_ProjectKB_Class10204]
-		[pc_advisor_ProjectKB_Class10205]
-		[pc_advisor_ProjectKB_Class10206]
-		[pc_advisor_ProjectKB_Class10207]
-		[pc_advisor_ProjectKB_Class10208]
-		[pc_advisor_ProjectKB_Class10209]
-		[pc_advisor_ProjectKB_Class10210]))
+		[pc_advisor_ProjectKB_Class10223]
+		[pc_advisor_ProjectKB_Class10224]
+		[pc_advisor_ProjectKB_Class10225]
+		[pc_advisor_ProjectKB_Class10226]
+		[pc_advisor_ProjectKB_Class10227]
+		[pc_advisor_ProjectKB_Class10228]
+		[pc_advisor_ProjectKB_Class10229]
+		[pc_advisor_ProjectKB_Class10230]
+		[pc_advisor_ProjectKB_Class10231]
+		[pc_advisor_ProjectKB_Class10232]
+		[pc_advisor_ProjectKB_Class10233]
+		[pc_advisor_ProjectKB_Class10234]
+		[pc_advisor_ProjectKB_Class10235]
+		[pc_advisor_ProjectKB_Class10236]))
 
 ([CLSES_TAB] of  Widget
 
@@ -294,82 +292,148 @@
 ([pc_advisor_ProjectKB_Class10103] of  Property_List
 )
 
-([pc_advisor_ProjectKB_Class10195] of  String
+([pc_advisor_ProjectKB_Class10211] of  Widget
+
+	(is_hidden FALSE)
+	(name "Apartment")
+	(property_list [pc_advisor_ProjectKB_Class10212])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([pc_advisor_ProjectKB_Class10212] of  Property_List
+
+	(properties
+		[pc_advisor_ProjectKB_Class10213]
+		[pc_advisor_ProjectKB_Class10214]))
+
+([pc_advisor_ProjectKB_Class10213] of  Property_List
+
+	(name "layout properties"))
+
+([pc_advisor_ProjectKB_Class10214] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "rooms")
+	(property_list [pc_advisor_ProjectKB_Class10215])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 0)
+	(y 0))
+
+([pc_advisor_ProjectKB_Class10215] of  Property_List
+)
+
+([pc_advisor_ProjectKB_Class10216] of  Widget
+
+	(is_hidden FALSE)
+	(name "House")
+	(property_list [pc_advisor_ProjectKB_Class10217])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([pc_advisor_ProjectKB_Class10217] of  Property_List
+
+	(properties
+		[pc_advisor_ProjectKB_Class10218]
+		[pc_advisor_ProjectKB_Class10221]))
+
+([pc_advisor_ProjectKB_Class10218] of  Property_List
+
+	(name "layout properties"))
+
+([pc_advisor_ProjectKB_Class10219] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "floors")
+	(property_list [pc_advisor_ProjectKB_Class10220])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 0)
+	(y 0))
+
+([pc_advisor_ProjectKB_Class10220] of  Property_List
+)
+
+([pc_advisor_ProjectKB_Class10221] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "rooms")
+	(property_list [pc_advisor_ProjectKB_Class10222])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 100)
+	(y 0))
+
+([pc_advisor_ProjectKB_Class10222] of  Property_List
+)
+
+([pc_advisor_ProjectKB_Class10223] of  String
 
 	(name "HDD")
 	(string_value "manufacturer{+}model{+}amount"))
 
-([pc_advisor_ProjectKB_Class10196] of  String
+([pc_advisor_ProjectKB_Class10224] of  String
 
 	(name "Graphics")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10197] of  String
+([pc_advisor_ProjectKB_Class10225] of  String
 
 	(name "Onboard")
 	(string_value "mem_type"))
 
-([pc_advisor_ProjectKB_Class10198] of  String
+([pc_advisor_ProjectKB_Class10226] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([pc_advisor_ProjectKB_Class10199] of  String
+([pc_advisor_ProjectKB_Class10227] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([pc_advisor_ProjectKB_Class10200] of  String
+([pc_advisor_ProjectKB_Class10228] of  String
 
 	(name "Router")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10201] of  String
-
-	(name "Apartment")
-	(string_value "rooms"))
-
-([pc_advisor_ProjectKB_Class10202] of  String
+([pc_advisor_ProjectKB_Class10229] of  String
 
 	(name "UPS")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10203] of  String
+([pc_advisor_ProjectKB_Class10230] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([pc_advisor_ProjectKB_Class10204] of  String
-
-	(name "House")
-	(string_value "floors{+and+}rooms"))
-
-([pc_advisor_ProjectKB_Class10205] of  String
+([pc_advisor_ProjectKB_Class10231] of  String
 
 	(name "Cooling")
 	(string_value "model"))
 
-([pc_advisor_ProjectKB_Class10206] of  String
+([pc_advisor_ProjectKB_Class10232] of  String
 
 	(name "Person")
 	(string_value "first_name"))
 
-([pc_advisor_ProjectKB_Class10207] of  String
+([pc_advisor_ProjectKB_Class10233] of  String
 
 	(name "Graphic")
 	(string_value "mem_type"))
 
-([pc_advisor_ProjectKB_Class10208] of  String
+([pc_advisor_ProjectKB_Class10234] of  String
 
 	(name "Processor")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10209] of  String
+([pc_advisor_ProjectKB_Class10235] of  String
 
 	(name "SSD")
 	(string_value "manufacturer{+}model{+}amount"))
 
-([pc_advisor_ProjectKB_Class10210] of  String
+([pc_advisor_ProjectKB_Class10236] of  String
 
 	(name "Motherboard")
 	(string_value "manufacturer{+}model"))
@@ -709,11 +773,11 @@
 
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
-		[INSTANCE_ANNOTATION_FORM_WIDGET]
-		[STANDARD_SLOT_FORM_WIDGET]
 		[STANDARD_FACET_FORM_WIDGET]
 		[PAL_FORM_WIDGET]
-		[STANDARD_CLASS_FORM_WIDGET])
+		[STANDARD_CLASS_FORM_WIDGET]
+		[INSTANCE_ANNOTATION_FORM_WIDGET]
+		[STANDARD_SLOT_FORM_WIDGET])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
 	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
