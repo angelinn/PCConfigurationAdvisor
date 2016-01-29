@@ -1,17 +1,9 @@
-; Mon Jan 25 22:55:13 EET 2016
+; Fri Jan 29 22:28:04 EET 2016
 ;
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
-(definstances computer_parts
-([pc_advisor_Class0] of  Apartment
-
-	(rooms 3))
-
-([pc_advisor_Class1] of  Apartment
-
-	(rooms 6))
-
+(definstances hardware_parts
 ([pc_advisor_Class10] of  UPS
 
 	(battery_time 180)
@@ -139,11 +131,6 @@
 	(manufacturer "AMD")
 	(model "Athlon X2"))
 
-([pc_advisor_Class2] of  House
-
-	(floors 1)
-	(rooms 3))
-
 ([pc_advisor_Class20000] of  Processor
 
 	(clock_speed 1900)
@@ -173,11 +160,6 @@
 	(has_turbo TRUE)
 	(manufacturer "Intel")
 	(model "i7 5500m"))
-
-([pc_advisor_Class3] of  House
-
-	(floors 3)
-	(rooms 10))
 
 ([pc_advisor_Class6] of  Router
 

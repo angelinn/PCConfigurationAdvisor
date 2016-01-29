@@ -170,7 +170,7 @@
         ?i <- (phase motherboards)
 =>
         (retract ?i)
-        (printout t crlf "Compatble motherboards: / ")
+        (printout t crlf "Compatible motherboards: / ")
         (print_result Motherboard)
         (printout t crlf)
 )

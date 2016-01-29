@@ -1,4 +1,4 @@
-; Tue Jan 26 00:29:19 EET 2016
+; Fri Jan 29 22:28:04 EET 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,20 +20,20 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[pc_advisor_ProjectKB_Class10223]
-		[pc_advisor_ProjectKB_Class10224]
-		[pc_advisor_ProjectKB_Class10225]
-		[pc_advisor_ProjectKB_Class10226]
-		[pc_advisor_ProjectKB_Class10227]
-		[pc_advisor_ProjectKB_Class10228]
-		[pc_advisor_ProjectKB_Class10229]
-		[pc_advisor_ProjectKB_Class10230]
-		[pc_advisor_ProjectKB_Class10231]
-		[pc_advisor_ProjectKB_Class10232]
-		[pc_advisor_ProjectKB_Class10233]
-		[pc_advisor_ProjectKB_Class10234]
-		[pc_advisor_ProjectKB_Class10235]
-		[pc_advisor_ProjectKB_Class10236]))
+		[pc_advisor_ProjectKB_Class10117]
+		[pc_advisor_ProjectKB_Class10118]
+		[pc_advisor_ProjectKB_Class10119]
+		[pc_advisor_ProjectKB_Class10120]
+		[pc_advisor_ProjectKB_Class10121]
+		[pc_advisor_ProjectKB_Class10122]
+		[pc_advisor_ProjectKB_Class10123]
+		[pc_advisor_ProjectKB_Class10124]
+		[pc_advisor_ProjectKB_Class10125]
+		[pc_advisor_ProjectKB_Class10126]
+		[pc_advisor_ProjectKB_Class10127]
+		[pc_advisor_ProjectKB_Class10128]
+		[pc_advisor_ProjectKB_Class10129]
+		[pc_advisor_ProjectKB_Class10130]))
 
 ([CLSES_TAB] of  Widget
 
@@ -74,7 +74,7 @@
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_273061_Class0] of  Map
+([KB_245743_Class0] of  Map
 )
 
 ([KB_638814_Class0] of  String
@@ -264,176 +264,76 @@
 ([pc_advisor_ProjectKB_Class10] of  Property_List
 )
 
-([pc_advisor_ProjectKB_Class100] of  Property_List
-
-	(properties
-		[pc_advisor_ProjectKB_Class10101]
-		[pc_advisor_ProjectKB_Class10102]))
-
 ([pc_advisor_ProjectKB_Class101] of  String
 
 	(name "SearchTab_Query"))
 
-([pc_advisor_ProjectKB_Class10101] of  Property_List
-
-	(name "layout properties"))
-
-([pc_advisor_ProjectKB_Class10102] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "are_there_often_thunders")
-	(property_list [pc_advisor_ProjectKB_Class10103])
-	(widget_class_name "edu.stanford.smi.protege.widget.CheckBoxWidget")
-	(width 200)
-	(x 0)
-	(y 0))
-
-([pc_advisor_ProjectKB_Class10103] of  Property_List
-)
-
-([pc_advisor_ProjectKB_Class10211] of  Widget
-
-	(is_hidden FALSE)
-	(name "Apartment")
-	(property_list [pc_advisor_ProjectKB_Class10212])
-	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
-
-([pc_advisor_ProjectKB_Class10212] of  Property_List
-
-	(properties
-		[pc_advisor_ProjectKB_Class10213]
-		[pc_advisor_ProjectKB_Class10214]))
-
-([pc_advisor_ProjectKB_Class10213] of  Property_List
-
-	(name "layout properties"))
-
-([pc_advisor_ProjectKB_Class10214] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "rooms")
-	(property_list [pc_advisor_ProjectKB_Class10215])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 0))
-
-([pc_advisor_ProjectKB_Class10215] of  Property_List
-)
-
-([pc_advisor_ProjectKB_Class10216] of  Widget
-
-	(is_hidden FALSE)
-	(name "House")
-	(property_list [pc_advisor_ProjectKB_Class10217])
-	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
-
-([pc_advisor_ProjectKB_Class10217] of  Property_List
-
-	(properties
-		[pc_advisor_ProjectKB_Class10218]
-		[pc_advisor_ProjectKB_Class10221]))
-
-([pc_advisor_ProjectKB_Class10218] of  Property_List
-
-	(name "layout properties"))
-
-([pc_advisor_ProjectKB_Class10219] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "floors")
-	(property_list [pc_advisor_ProjectKB_Class10220])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 0)
-	(y 0))
-
-([pc_advisor_ProjectKB_Class10220] of  Property_List
-)
-
-([pc_advisor_ProjectKB_Class10221] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "rooms")
-	(property_list [pc_advisor_ProjectKB_Class10222])
-	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
-	(width 100)
-	(x 100)
-	(y 0))
-
-([pc_advisor_ProjectKB_Class10222] of  Property_List
-)
-
-([pc_advisor_ProjectKB_Class10223] of  String
+([pc_advisor_ProjectKB_Class10117] of  String
 
 	(name "HDD")
 	(string_value "manufacturer{+}model{+}amount"))
 
-([pc_advisor_ProjectKB_Class10224] of  String
+([pc_advisor_ProjectKB_Class10118] of  String
 
 	(name "Graphics")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10225] of  String
+([pc_advisor_ProjectKB_Class10119] of  String
 
 	(name "Onboard")
 	(string_value "mem_type"))
 
-([pc_advisor_ProjectKB_Class10226] of  String
+([pc_advisor_ProjectKB_Class10120] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([pc_advisor_ProjectKB_Class10227] of  String
+([pc_advisor_ProjectKB_Class10121] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([pc_advisor_ProjectKB_Class10228] of  String
+([pc_advisor_ProjectKB_Class10122] of  String
 
 	(name "Router")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10229] of  String
+([pc_advisor_ProjectKB_Class10123] of  String
 
 	(name "UPS")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10230] of  String
+([pc_advisor_ProjectKB_Class10124] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([pc_advisor_ProjectKB_Class10231] of  String
+([pc_advisor_ProjectKB_Class10125] of  String
 
 	(name "Cooling")
 	(string_value "model"))
 
-([pc_advisor_ProjectKB_Class10232] of  String
+([pc_advisor_ProjectKB_Class10126] of  String
 
 	(name "Person")
 	(string_value "first_name"))
 
-([pc_advisor_ProjectKB_Class10233] of  String
+([pc_advisor_ProjectKB_Class10127] of  String
 
 	(name "Graphic")
 	(string_value "mem_type"))
 
-([pc_advisor_ProjectKB_Class10234] of  String
+([pc_advisor_ProjectKB_Class10128] of  String
 
 	(name "Processor")
 	(string_value "manufacturer{+}model"))
 
-([pc_advisor_ProjectKB_Class10235] of  String
+([pc_advisor_ProjectKB_Class10129] of  String
 
 	(name "SSD")
 	(string_value "manufacturer{+}model{+}amount"))
 
-([pc_advisor_ProjectKB_Class10236] of  String
+([pc_advisor_ProjectKB_Class10130] of  String
 
 	(name "Motherboard")
 	(string_value "manufacturer{+}model"))
@@ -762,22 +662,15 @@
 	(property_list [pc_advisor_ProjectKB_Class10])
 	(widget_class_name "uk.ac.man.cs.mig.coode.debugger.test.DebuggerTestTab"))
 
-([pc_advisor_ProjectKB_Class99] of  Widget
-
-	(is_hidden FALSE)
-	(name "Weather")
-	(property_list [pc_advisor_ProjectKB_Class100])
-	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
-
 ([PROJECT] of  Project
 
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
-		[STANDARD_FACET_FORM_WIDGET]
-		[PAL_FORM_WIDGET]
-		[STANDARD_CLASS_FORM_WIDGET]
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
-		[STANDARD_SLOT_FORM_WIDGET])
+		[STANDARD_FACET_FORM_WIDGET]
+		[STANDARD_SLOT_FORM_WIDGET]
+		[PAL_FORM_WIDGET]
+		[STANDARD_CLASS_FORM_WIDGET])
 	(default_cls_metaclass ":STANDARD-CLASS")
 	(default_facet_metaclass ":STANDARD-FACET")
 	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")

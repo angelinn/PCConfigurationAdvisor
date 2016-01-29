@@ -1,4 +1,4 @@
-; Tue Jan 26 00:29:19 EET 2016
+; Fri Jan 29 22:28:04 EET 2016
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -7,10 +7,6 @@
 (defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
 	(is-a USER)
 	(role abstract)
-	(single-slot pc_advisor_Class59
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot has_integrated_video
 		(type INSTANCE)
 ;+		(allowed-classes Graphics)
@@ -20,11 +16,6 @@
 		(type SYMBOL)
 		(allowed-values ATX M-ATX)
 ;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot are_there_often_thunders
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
-;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot clock_speed
 		(type INTEGER)
@@ -41,31 +32,13 @@
 		(allowed-values Optical Flash)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot router_location
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot manufacturer
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot refresh_rate
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot inches
-		(type INTEGER)
-		(range 15 24)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot cores
 		(type INTEGER)
 		(range 1 12)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot supports
-		(type INSTANCE)
-;+		(allowed-classes Drive)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot has_turbo
@@ -78,10 +51,6 @@
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot power
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot antennas
 		(type INTEGER)
 		(range 1 4)
@@ -92,10 +61,6 @@
 		(allowed-values DDR DDR2 DDR3 DDR4 GDDR3 GDDR5 Shared)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot pc_advisor_Class17
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(multislot ram_slots
 		(type INSTANCE)
 ;+		(allowed-classes Memory)
@@ -105,28 +70,10 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot memory_amount
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot watts
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot system
-		(type SYMBOL)
-		(allowed-values 2.0 2.1 5.1 7.1)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot has_hyperthreading
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot is_gamer
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
-;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot amount
 		(type STRING)
@@ -151,39 +98,17 @@
 		(range 128 4096)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot available_cash
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot memory_type
 		(type INSTANCE)
 ;+		(allowed-classes Graphic)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot type
-		(type SYMBOL)
-		(allowed-values DDR DDR2 DDR3 DDR4)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot battery_time
 		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot floors
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot rooms
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot cpu_socket
 		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot has_flash_memory
-		(type SYMBOL)
-		(allowed-values FALSE TRUE)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot socket
@@ -202,10 +127,6 @@
 	(single-slot likes_games
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot available_cash
-		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot first_name
